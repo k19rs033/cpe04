@@ -166,7 +166,7 @@
 
     // Alarmの処理
     function alarm(){
-      var canvas= $("mycanvas")[0];
+      var canvas= $("#mycanvas")[0];
       var ctx = canvas.getContext("2d");
       var img = new Image();
       img.src = "ksuisbg.gif";
@@ -175,7 +175,7 @@
       }
 
       var audio = new Audio();
-      audio.scr = "pin.wav";
+      audio.src = "pin.wav";
       audio.play();
         
         
@@ -199,6 +199,7 @@
     // ButtonCがクリックされた時の処理
     function btnCClick(e){
         alarm();
+        
         active = false;
         period = 60* parseInt($("#minute").val()) +parseInt($("#second").val());
         $("#time").html("経過時間：0");
